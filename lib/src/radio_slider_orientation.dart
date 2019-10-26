@@ -1,0 +1,4 @@
+enum RadioSliderOrientation {
+  Vertical,
+  Horizontal,
+}
