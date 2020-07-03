@@ -16,7 +16,7 @@ class RadioSliderThumbShape extends SliderComponentShape {
       {Animation<double> activationAnimation, Animation<double> enableAnimation,
         bool isDiscrete, TextPainter labelPainter, RenderBox parentBox,
         SliderThemeData sliderTheme, TextDirection textDirection,
-        double value}) {
+        double value, double textScaleFactor, Size sizeWithOverflow}) {
     var outerValueStyle = Paint()
       ..color = this.activeColor ?? sliderTheme.activeTickMarkColor
       ..strokeWidth = 4.0
