@@ -18,9 +18,9 @@ class RadioSlider extends StatefulWidget {
     this.orientation = RadioSliderOrientation.Horizontal,
     @required this.onChanged,
     this.activeColor,
-  }) : assert(divisions >= 1),
-       assert(value >= 0 && value <= divisions),
-       super(key: key);
+  })  : assert(divisions >= 1),
+        assert(value >= 0 && value <= divisions),
+        super(key: key);
 
   @override
   _RadioSliderState createState() => _RadioSliderState();

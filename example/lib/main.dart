@@ -7,13 +7,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = SliderTheme.of(context).copyWith(
-      trackHeight: 10,
-      overlayColor: Colors.lightGreen.withAlpha(32),
-      activeTickMarkColor: Colors.lightGreen,
-      activeTrackColor: Colors.grey[300],
-      inactiveTrackColor: Colors.grey[300],
-      inactiveTickMarkColor: Colors.grey[500]
-    );
+        trackHeight: 10,
+        overlayColor: Colors.lightGreen.withAlpha(32),
+        activeTickMarkColor: Colors.lightGreen,
+        activeTrackColor: Colors.grey[300],
+        inactiveTrackColor: Colors.grey[300],
+        inactiveTickMarkColor: Colors.grey[500]);
 
     return MaterialApp(
       home: Scaffold(
@@ -40,7 +39,7 @@ class MyApp extends StatelessWidget {
             Text("Default"),
             RadioSlider(
               activeColor: Colors.blue,
-              onChanged: (value) { /* no-op */ },
+              onChanged: (value) {/* no-op */},
             ),
             Divider(),
             Text("Vertical Orientation"),

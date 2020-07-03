@@ -13,10 +13,16 @@ class RadioSliderThumbShape extends SliderComponentShape {
 
   @override
   void paint(PaintingContext context, Offset center,
-      {Animation<double> activationAnimation, Animation<double> enableAnimation,
-        bool isDiscrete, TextPainter labelPainter, RenderBox parentBox,
-        SliderThemeData sliderTheme, TextDirection textDirection,
-        double value, double textScaleFactor, Size sizeWithOverflow}) {
+      {Animation<double> activationAnimation,
+      Animation<double> enableAnimation,
+      bool isDiscrete,
+      TextPainter labelPainter,
+      RenderBox parentBox,
+      SliderThemeData sliderTheme,
+      TextDirection textDirection,
+      double value,
+      double textScaleFactor,
+      Size sizeWithOverflow}) {
     var outerValueStyle = Paint()
       ..color = this.activeColor ?? sliderTheme.activeTickMarkColor
       ..strokeWidth = 4.0
@@ -45,9 +51,12 @@ class RadioSliderTickMarkShape extends SliderTickMarkShape {
 
   @override
   void paint(PaintingContext context, Offset center,
-      {RenderBox parentBox, SliderThemeData sliderTheme,
-        Animation<double> enableAnimation, Offset thumbCenter, bool isEnabled,
-        TextDirection textDirection}) {
+      {RenderBox parentBox,
+      SliderThemeData sliderTheme,
+      Animation<double> enableAnimation,
+      Offset thumbCenter,
+      bool isEnabled,
+      TextDirection textDirection}) {
     var innerStyle = Paint()
       ..color = sliderTheme.inactiveTickMarkColor
       ..style = PaintingStyle.fill;
