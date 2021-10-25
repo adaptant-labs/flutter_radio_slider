@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'radio_slider_orientation.dart';
 import 'radio_slider_shape.dart';
 
@@ -8,15 +9,15 @@ class RadioSlider extends StatefulWidget {
   final int value;
   final RadioSliderOrientation orientation;
   final ValueChanged<int> onChanged;
-  final Color activeColor;
+  final Color? activeColor;
 
   const RadioSlider({
-    Key key,
+    Key? key,
     this.divisions = 1,
     this.outerCircle = true,
     this.value = 0,
     this.orientation = RadioSliderOrientation.Horizontal,
-    @required this.onChanged,
+    required this.onChanged,
     this.activeColor,
   })  : assert(divisions >= 1),
         assert(value >= 0 && value <= divisions),
@@ -27,7 +28,7 @@ class RadioSlider extends StatefulWidget {
 }
 
 class _RadioSliderState extends State<RadioSlider> {
-  num _value;
+  num _value = 0;
 
   @override
   void initState() {

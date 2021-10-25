@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RadioSliderThumbShape extends SliderComponentShape {
   bool outerCircle;
-  Color activeColor;
+  Color? activeColor;
 
   RadioSliderThumbShape({this.outerCircle = true, this.activeColor});
 
@@ -13,22 +13,22 @@ class RadioSliderThumbShape extends SliderComponentShape {
 
   @override
   void paint(PaintingContext context, Offset center,
-      {Animation<double> activationAnimation,
-      Animation<double> enableAnimation,
-      bool isDiscrete,
-      TextPainter labelPainter,
-      RenderBox parentBox,
-      SliderThemeData sliderTheme,
-      TextDirection textDirection,
-      double value,
-      double textScaleFactor,
-      Size sizeWithOverflow}) {
+      {required Animation<double> activationAnimation,
+      required Animation<double> enableAnimation,
+      required bool isDiscrete,
+      required TextPainter labelPainter,
+      required RenderBox parentBox,
+      required SliderThemeData sliderTheme,
+      required TextDirection textDirection,
+      required double value,
+      required double textScaleFactor,
+      required Size sizeWithOverflow}) {
     var outerValueStyle = Paint()
-      ..color = this.activeColor ?? sliderTheme.activeTickMarkColor
+      ..color = (this.activeColor ?? sliderTheme.activeTickMarkColor)!
       ..strokeWidth = 4.0
       ..style = PaintingStyle.stroke;
     var innerValueStyle = Paint()
-      ..color = this.activeColor ?? sliderTheme.activeTickMarkColor
+      ..color = (this.activeColor ?? sliderTheme.activeTickMarkColor)!
       ..style = PaintingStyle.fill;
 
     // paint the optional outer circle
@@ -45,24 +45,25 @@ class RadioSliderTickMarkShape extends SliderTickMarkShape {
   RadioSliderTickMarkShape();
 
   @override
-  Size getPreferredSize({SliderThemeData sliderTheme, bool isEnabled}) {
+  Size getPreferredSize(
+      {required SliderThemeData sliderTheme, required bool isEnabled}) {
     return Size.fromRadius(0);
   }
 
   @override
   void paint(PaintingContext context, Offset center,
-      {RenderBox parentBox,
-      SliderThemeData sliderTheme,
-      Animation<double> enableAnimation,
-      Offset thumbCenter,
-      bool isEnabled,
-      TextDirection textDirection}) {
+      {required RenderBox parentBox,
+      required SliderThemeData sliderTheme,
+      required Animation<double> enableAnimation,
+      required Offset thumbCenter,
+      required bool isEnabled,
+      required TextDirection textDirection}) {
     var innerStyle = Paint()
-      ..color = sliderTheme.inactiveTickMarkColor
+      ..color = sliderTheme.inactiveTickMarkColor!
       ..style = PaintingStyle.fill;
 
     var outerStyle = Paint()
-      ..color = sliderTheme.inactiveTrackColor
+      ..color = sliderTheme.inactiveTrackColor!
       ..style = PaintingStyle.fill;
 
     // outer circle

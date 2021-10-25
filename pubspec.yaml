@@ -1,12 +1,12 @@
 name: flutter_radio_slider
 description: A Stepped Slider with Radio Buttons for Flutter
-version: 0.0.2
+version: 0.1.0
 homepage: https://github.com/adaptant-labs/flutter_radio_slider
 repository: https://github.com/adaptant-labs/flutter_radio_slider
 issue_tracker: https://github.com/adaptant-labs/flutter_radio_slider/issues
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
